@@ -1,0 +1,74 @@
+
+Discarded input sections
+
+ .data          0x00000000        0x0 obj\debug\startup_stm32f10x_md.o
+ .bss           0x00000000        0x0 obj\debug\startup_stm32f10x_md.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x08000000         0x00010000         xr
+RAM              0x20000000         0x00005000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00000000                __HEAP_SIZE = 0x0
+                0x00000100                __STACK_SIZE = 0x100
+
+.text           0x08000000       0x38
+ *(.isr_vector)
+ .isr_vector    0x08000000        0x8 obj\debug\startup_stm32f10x_md.o
+ *(.text*)
+ .text          0x08000008       0x30 obj\debug\startup_stm32f10x_md.o
+LOAD obj\debug\startup_stm32f10x_md.o
+START GROUP
+LOAD c:/program files/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a
+LOAD c:/program files/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg.a
+LOAD c:/program files/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a
+END GROUP
+START GROUP
+LOAD c:/program files/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a
+LOAD c:/program files/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a
+LOAD c:/program files/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libnosys.a
+END GROUP
+OUTPUT(bin\Debug\ARM_ASM_01.elf elf32-littlearm)
+
+.glue_7         0x08000038        0x0
+ .glue_7        0x08000038        0x0 linker stubs
+
+.glue_7t        0x08000038        0x0
+ .glue_7t       0x08000038        0x0 linker stubs
+
+.vfp11_veneer   0x08000038        0x0
+ .vfp11_veneer  0x08000038        0x0 linker stubs
+
+.v4_bx          0x08000038        0x0
+ .v4_bx         0x08000038        0x0 linker stubs
+
+.iplt           0x08000038        0x0
+ .iplt          0x08000038        0x0 obj\debug\startup_stm32f10x_md.o
+
+.igot.plt       0x08000038        0x0
+ .igot.plt      0x08000038        0x0 obj\debug\startup_stm32f10x_md.o
+
+.rel.dyn        0x08000038        0x0
+ .rel.iplt      0x08000038        0x0 obj\debug\startup_stm32f10x_md.o
+
+.ARM.attributes
+                0x00000000       0x1b
+ .ARM.attributes
+                0x00000000       0x1b obj\debug\startup_stm32f10x_md.o
+
+.debug_line     0x00000000       0x63
+ .debug_line    0x00000000       0x63 obj\debug\startup_stm32f10x_md.o
+
+.debug_info     0x00000000       0x5d
+ .debug_info    0x00000000       0x5d obj\debug\startup_stm32f10x_md.o
+
+.debug_abbrev   0x00000000       0x14
+ .debug_abbrev  0x00000000       0x14 obj\debug\startup_stm32f10x_md.o
+
+.debug_aranges  0x00000000       0x20
+ .debug_aranges
+                0x00000000       0x20 obj\debug\startup_stm32f10x_md.o
